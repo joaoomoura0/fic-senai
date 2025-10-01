@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "funcoes")
 @Getter
 @Setter
-public class FuncaoModel {
+public class Funcao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idFuncao;

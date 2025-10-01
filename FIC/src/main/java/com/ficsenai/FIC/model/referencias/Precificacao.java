@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "precificacoes")
 @Getter
 @Setter
-public class PrecificacaoModel {
+public class Precificacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPrecificacao;

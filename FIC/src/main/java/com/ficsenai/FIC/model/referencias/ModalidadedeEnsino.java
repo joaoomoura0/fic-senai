@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "modalidades_ensino")
 @Getter
 @Setter
-public class ModalidadeEnsinoModel {
+public class ModalidadeEnsino {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idModalidadeEnsino;
