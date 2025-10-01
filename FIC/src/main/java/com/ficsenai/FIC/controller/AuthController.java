@@ -1,4 +1,4 @@
-package com.example.seuprojeto.controller;
+package com.example.FIC.controller;
 
 import com.example.seuprojeto.dto.auth.LoginRequest;
 import com.example.seuprojeto.dto.auth.RegisterRequest;
