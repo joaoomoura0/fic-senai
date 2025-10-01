@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/static/login.css}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SENAI</title>
+</head>
+<body>
+<div class="login-container">
+    <div class="login-box">
+        <div class="logo">
+            <img th:src="@{/static/img/logo-azul.png}" alt="Logo SENAI" class="logo-img">
+        </div>
+
+        <div class="form">
+            <form th:action="@{/auth/login}" method="post">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required />
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+                <button type="submit" class="btn" style="margin-top: 20px;">Entrar</button>
+            </form>
+
+            <form action="cadastro" method="GET" style="margin-top: 15px;">
+                <button type="submit" class="btn btn-cadastrar" style="margin-bottom: 10px;">Cadastrar</button>
+            </form>
+
+            <!-- Mensagem de erro -->
+            <div th:if="${loginError}" style="color:red; margin-top: 20px; text-align: center;">
+                <p th:text="${loginError}"></p>
+            </div>
+
+            <!-- Mensagem de sucesso (após cadastro) -->
+            <div th:if="${success}" style="color:green; margin-top: 20px; text-align: center;">
+                <p th:text="${success}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
